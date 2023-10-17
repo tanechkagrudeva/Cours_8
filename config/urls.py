@@ -36,8 +36,8 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
-    path('habit/', include('habit.urls', namespace='habit')),
-    path('user/', include('users.urls', namespace='users')),
+    path('habit/', include('apps.habits.urls', namespace='habits')),
+    path('user/', include('apps.users.urls', namespace='users')),
 
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
